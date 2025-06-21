@@ -1,0 +1,89 @@
+environments:
+  dev:
+    baseUrl: https://automationexercise.com
+    timeout: 30000
+    retries: 2
+    headless: false
+    slowMo: 1000
+    viewport:
+      width: 1920
+      height: 1080
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+  
+  staging:
+    baseUrl: "https://staging.example.com"
+    timeout: 30000
+    retries: 1
+    headless: true
+    slowMo: 500
+    viewport:
+      width: 1920
+      height: 1080
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  
+  production:
+    baseUrl: "https://example.com"
+    timeout: 30000
+    retries: 0
+    headless: true
+    slowMo: 0
+    viewport:
+      width: 1920
+      height: 1080
+    userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+
+testData:
+  validUser:
+    username: "testuser@example.com"
+    password: "testpass123"
+    name: "Test User"
+    email: "testuser@example.com"
+  invalidUser:
+    username: "invalid@example.com"
+    password: "wrongpass"
+    name: "Invalid User"
+    email: "invalid@example.com"
+  newUser:
+    name: "New User"
+    email: "newuser@example.com"
+    password: "newpass123"
+    firstName: "New"
+    lastName: "User"
+    company: "Test Company"
+    address1: "123 Test Street"
+    address2: "Apt 4B"
+    country: "United States"
+    state: "California"
+    city: "San Francisco"
+    zipCode: "94102"
+    mobileNumber: "+1234567890"
+  productData:
+    searchProduct: "Blue Top"
+    category: "Women"
+    brand: "Polo"
+    priceRange: "500-1000"
+  subscriptionEmail: "test@example.com"
+
+api:
+  baseUrl: https://automationexercise.com/api
+  timeout: 10000
+  retries: 3
+  headers:
+    Content-Type: application/json
+
+browsers:
+  - name: "chromium"
+    channel: "chrome"
+  - name: "firefox"
+    channel: "firefox"
+  - name: "webkit"
+    channel: "webkit"
+
+mobile:
+  devices:
+    - name: "iPhone 12"
+      viewport: { width: 390, height: 844 }
+      userAgent: "Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Mobile/15E148 Safari/604.1"
+    - name: "Pixel 5"
+      viewport: { width: 393, height: 851 }
+      userAgent: "Mozilla/5.0 (Linux; Android 11; Pixel 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Mobile Safari/537.36" 
