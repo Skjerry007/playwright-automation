@@ -14,22 +14,30 @@
     "test:codegen": "playwright codegen",
     "install:browsers": "playwright install",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "mcp:start": "ts-node mcp-server/index.ts",
+    "mcp:dev": "nodemon mcp-server/index.ts",
+    "mcp:build": "tsc mcp-server/index.ts --outDir dist"
   },
-  "keywords": ["playwright", "automation", "testing", "e2e"],
+  "keywords": ["playwright", "automation", "testing", "e2e", "mcp"],
   "author": "Your Name",
   "license": "MIT",
   "devDependencies": {
     "@playwright/test": "^1.40.0",
     "@types/node": "^20.0.0",
     "eslint": "^8.0.0",
-    "typescript": "^5.0.0"
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0",
+    "nodemon": "^3.0.0"
   },
   "dependencies": {
     "winston": "^3.11.0",
     "dotenv": "^16.3.0",
     "yaml": "^2.3.0",
     "moment": "^2.29.4",
-    "chalk": "^4.1.2"
+    "chalk": "^4.1.2",
+    "@modelcontextprotocol/sdk": "^0.4.0",
+    "ws": "^8.14.0",
+    "uuid": "^9.0.0"
   }
 } 
